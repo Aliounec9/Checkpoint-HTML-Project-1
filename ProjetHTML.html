@@ -3,41 +3,68 @@
   <head>
     <title>Projet HTML 1</title>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <header>
-      <nav>
-        <div>
-          <h1>Portfolio Web</h1>
+      <nav class="navigation">
+        <div class="left">
+          <h1><span>Bonjour Je suis Alioune, un développeur Web</span></h1>
         </div>
-        <div>
-          <ul>
-            <li><a href="#accueil" href="ProjetHTML1.html">Accueil</a></li>
-            <li><a href="#about" href="ProjetHTML1.html">A propos</a></li>
-            <li>
-              <a href="#experience" href="ProjetHTML1.html"
-                >Expérience professionnelle</a
-              >
-            </li>
-            <li><a href="#cv" href="ProjetHTML1.html">CV</a></li>
-            <li><a href="#contact " href="ProjetHTML1.html">Contact</a></li>
-          </ul>
+        <div class="right">
+          <span id="deconav">
+            <ul class="navigation-menu">
+              <li>
+                <a
+                  class="navigation-item"
+                  href="#accueil"
+                  href="ProjetHTML1.html"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a class="navigation-item" href="#about" href="ProjetHTML1.html"
+                  >A propos</a
+                >
+              </li>
+              <li>
+                <a
+                  class="navigation-item"
+                  href="#experience"
+                  href="ProjetHTML1.html"
+                  >Expérience professionnelle</a
+                >
+              </li>
+              <li>
+                <a class="navigation-item" href="#cv" href="ProjetHTML1.html"
+                  >CV</a
+                >
+              </li>
+              <li>
+                <a
+                  class="navigation-item"
+                  href="#contact "
+                  href="ProjetHTML1.html"
+                  >Contact</a
+                >
+              </li>
+            </ul></span
+          >
         </div>
       </nav>
     </header>
     <main>
       <section id="accueil">
         <div>
-          <h2>Bonjour je m'appel Alioune</h2>
-          <p>Je suis développer Web</p>
+          <h2>Portfolio Web</h2>
+          <p>Je suis un développeur Web</p>
           <button>Contacter moi</button>
         </div>
         <div>
           <img
-            src="https://themewagon.github.io/picto/assets/person-CqOZwXV1.png"
+            src="https://media.istockphoto.com/id/1435220822/fr/photo/d%C3%A9veloppeur-de-logiciels-afro-am%C3%A9ricain.jpg?s=1024x1024&w=is&k=20&c=RuEHaxkpWgJFXGWrqNGHxjZe-A5H8WfvvCgVVQ8mqaA="
             alt="Contenu additionnel"
-            width="200px"
+            width="500px"
             height="200px"
           />
         </div>
@@ -50,9 +77,15 @@
         <h2>Expérience professionnelle</h2>
         <p>Je suis un étudiant Gomycode.</p>
       </section>
-      <section id="accueil">
-        <h2>CV</h2>
-        <p>Voilà à quoi ressemblent mes compétences actuelles en développement!</p>
+      <section id="cv">
+        <div>
+          <h2>CV</h2>
+          <p>
+            Voilà à quoi ressemblent mes compétences actuelles en développement!
+            👉🏼
+          </p>
+          <a href="mon-cv.pdf" download="cv-alioune.pdf">Télécharger mon CV</a>
+        </div>
         <iframe
           width="560"
           height="315"
@@ -73,22 +106,33 @@
         ></iframe>
       </section>
       <section id="contact">
-        <h2>Contact</h2>
-        <form>
-          <label for="nom">Nom Complet :</label>
-          <input type="text" id="nom" name="nom" required /><br />
-          <label for="mail">Adresse mail :</label>
-          <input type="email" id="mail" name="mail" required /> <br />
-          <label for="tel">Téléphone :</label>
-          <input type="tel" id="tel" name="tel" required /><br />
-          <label for="message">Message :</label>
-          <textarea id="message" name="message" rows="4"></textarea><br />
-          <button type="submit">Envoyer</button><br />
+        <h2>Nous Contacter</h2>
+        <form action="/traitement-formulaire" method="post">
+          <div class="form-goup">
+            <div>
+              <label for="nom">Nom Complet :</label>
+              <input type="text" id="nom" name="nom" required /><br />
+            </div>
+            <div>
+              <label for="mail">E-mail :</label>
+              <input type="email" id="mail" name="mail" required /> <br />
+            </div>
+            <div>
+              <label for="tel">Téléphone :</label>
+              <input type="tel" id="tel" name="tel" required /><br />
+            </div>
+            <div>
+              <label for="message">Message :</label>
+              <textarea id="message" name="message" rows="4"></textarea><br />
+            </div>
+            <button type="submit">Envoyer</button><br />
+          </div>
         </form>
       </section>
+      <hr />
     </main>
     <footer>
-      <p>Copiright by NDIAYE</p>
+      <p id="copyright">Copiright by NDIAYE</p>
     </footer>
   </body>
 </html>
